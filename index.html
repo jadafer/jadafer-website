@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Jadafer Inc. provides business consulting across finance, strategy, human resources, operations, and industrial engineering." />
+  <title>Jadafer Inc. | Business Performance Consulting</title>
+  <style>
+    :root{
+      --navy:#071a4a;
+      --blue:#2f6da5;
+      --sky:#7bc6ee;
+      --ice:#eef7fb;
+      --ink:#1c2636;
+      --muted:#5d6878;
+      --line:#dce7ef;
+      --white:#ffffff;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color:var(--ink);
+      background:var(--white);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max),92%);margin:auto}
+    header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{font-family:Georgia, "Times New Roman", serif;font-weight:700;letter-spacing:.04em;color:var(--navy);font-size:1.35rem}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:.95rem;color:#334155}
+    .nav-links a:hover{color:var(--blue)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 20px;border-radius:8px;
+      font-weight:700;border:1px solid transparent;
+      transition:.2s ease;
+    }
+    .btn-primary{background:var(--navy);color:white}
+    .btn-primary:hover{background:#10296d;transform:translateY(-1px)}
+    .btn-outline{border-color:#b7c7d6;color:var(--navy);background:white}
+    .btn-outline:hover{border-color:var(--navy)}
+    .hero{
+      background:linear-gradient(180deg,var(--ice),#fff);
+      padding:72px 0 64px;
+    }
+    .hero-grid{
+      display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center
+    }
+    .eyebrow{
+      color:var(--blue);font-weight:800;text-transform:uppercase;
+      letter-spacing:.15em;font-size:.78rem;margin-bottom:14px
+    }
+    h1,h2,h3{line-height:1.14;margin:0;color:var(--navy)}
+    h1{font-family:Georgia, "Times New Roman", serif;font-size:clamp(2.7rem,5vw,5rem);letter-spacing:-.03em}
+    .hero p{font-size:1.18rem;color:#48576a;max-width:720px;margin:22px 0 30px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-logo{
+      background:white;border:1px solid var(--line);border-radius:22px;
+      padding:26px;box-shadow:0 18px 50px rgba(8,33,74,.08)
+    }
+    .trust{padding:24px 0;border-bottom:1px solid var(--line);border-top:1px solid var(--line)}
+    .trust-row{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;color:#516072;font-size:.92rem}
+    section{padding:88px 0}
+    .section-head{max-width:760px;margin-bottom:44px}
+    .section-head p{color:var(--muted);font-size:1.05rem;margin:14px 0 0}
+    h2{font-family:Georgia, "Times New Roman", serif;font-size:clamp(2rem,3vw,3.25rem);letter-spacing:-.02em}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .card{
+      border:1px solid var(--line);border-radius:16px;padding:30px;background:white;
+      box-shadow:0 10px 30px rgba(12,37,71,.04)
+    }
+    .card h3{font-size:1.25rem;margin-bottom:12px}
+    .card p{color:var(--muted);margin:0}
+    .card ul{padding-left:20px;margin:16px 0 0;color:#455266}
+    .card li+li{margin-top:8px}
+    .experience{background:#f8fbfd}
+    .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .exp-card{background:white;border:1px solid var(--line);border-radius:14px;padding:26px}
+    .exp-card .sector{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--blue)}
+    .exp-card h3{margin:8px 0 10px}
+    .exp-card p{color:var(--muted);font-size:.96rem;margin:0}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:start}
+    .quote{
+      background:var(--navy);color:white;border-radius:18px;padding:34px;
+      font-family:Georgia, "Times New Roman", serif;font-size:1.5rem;line-height:1.45
+    }
+    .about-copy p{color:var(--muted);font-size:1.03rem;margin-top:0}
+    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .pill{padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#46566b;background:#fff;font-size:.9rem}
+    .contact{background:linear-gradient(135deg,#071a4a,#12397c);color:white}
+    .contact h2,.contact h3{color:white}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .contact p{color:#dbe7f6}
+    .contact-box{background:white;color:var(--ink);border-radius:16px;padding:28px}
+    .contact-box a{color:var(--navy);font-weight:700}
+    footer{padding:30px 0;border-top:1px solid var(--line);font-size:.9rem;color:#667085}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .mobile-toggle{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy)}
+
+
+    .client-ticker-wrap{margin-top:54px;padding:28px 0 8px;border-top:1px solid var(--line);overflow:hidden}
+    .client-ticker-label{text-align:center;color:var(--navy);font-size:.76rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:22px}
+    .client-ticker{overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)}
+    .client-ticker-track{width:max-content;display:flex;align-items:center;gap:58px;animation:clientTicker 28s linear infinite}
+    .client-ticker:hover .client-ticker-track{animation-play-state:paused}
+    .client-logo{width:190px;height:76px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;padding:8px 12px}
+    .client-logo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+    @keyframes clientTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @media (prefers-reduced-motion:reduce){.client-ticker-track{animation:none}}
+
+    .founder-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:58px;align-items:center;margin-top:54px}
+    .founder-photo{max-width:390px;margin:auto}
+    .founder-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:18px;box-shadow:0 18px 50px rgba(8,33,74,.12);border:1px solid var(--line)}
+    .founder-copy h3{font-family:Georgia, "Times New Roman", serif;font-size:2rem;margin-bottom:4px}
+    .founder-title{color:var(--blue);font-weight:800;margin:0 0 18px}
+    .founder-copy p{color:var(--muted);font-size:1.03rem}
+    @media (max-width:900px){
+      .hero-grid,.about-grid,.contact-grid,.founder-grid{grid-template-columns:1fr}
+      .hero-logo{max-width:620px}
+      .exp-grid{grid-template-columns:1fr 1fr}
+      .nav-links{display:none;position:absolute;top:78px;left:0;right:0;background:white;border-bottom:1px solid var(--line);padding:18px 4%;flex-direction:column;align-items:flex-start}
+      .nav-links.open{display:flex}
+      .mobile-toggle{display:block}
+    }
+    @media (max-width:640px){
+      section{padding:68px 0}
+      .cards,.exp-grid{grid-template-columns:1fr}
+      .hero{padding-top:50px}
+      h1{font-size:2.7rem}
+      .nav .btn-primary{display:none}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">JADAFER INC.</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Schedule a Consultation</a>
+    <button class="mobile-toggle" aria-label="Open navigation" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Business Performance Consulting</div>
+        <h1>Strategy. People. Results.</h1>
+        <p>Jadafer Inc. helps startups and growing businesses strengthen financial performance, build scalable people practices, and improve operational efficiency through practical, hands-on consulting.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#services">Explore Our Services</a>
+          <a class="btn btn-outline" href="#experience">View Experience</a>
+        </div>
+      </div>
+      <div class="hero-logo">
+        <img src="jadafer-logo.png" alt="Jadafer Inc. Business Consulting logo">
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="container trust-row">
+      <span>Finance & FP&amp;A</span>
+      <span>Business Strategy</span>
+      <span>Human Resources</span>
+      <span>Industrial Engineering</span>
+      <span>Process Improvement</span>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">What We Do</div>
+        <h2>Focused expertise for better business performance.</h2>
+        <p>We help clients build the financial, operational, and people infrastructure needed to scale with greater clarity and control.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>Finance &amp; FP&amp;A</h3>
+          <p>Improve financial visibility and decision-making with stronger planning, reporting, and analysis.</p>
+          <ul>
+            <li>Budgeting and forecasting</li>
+            <li>Financial modeling and dashboards</li>
+            <li>Management reporting and variance analysis</li>
+            <li>Profitability, capital expenditure, and ROI analysis</li>
+            <li>Accounting process review and optimization</li>
+            <li>Microsoft Dynamics and QuickBooks implementation support</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Business Strategy &amp; Operations</h3>
+          <p>Translate business goals into actionable plans, measurable priorities, and scalable operating practices.</p>
+          <ul>
+            <li>Strategic business planning</li>
+            <li>Resource allocation and performance management</li>
+            <li>Pricing and investment analysis</li>
+            <li>Operational efficiency and workflow improvement</li>
+            <li>Business process design</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Human Resources</h3>
+          <p>Build practical HR programs that support growth, consistency, and employee performance.</p>
+          <ul>
+            <li>Employee handbooks and HR processes</li>
+            <li>Compensation and benefits analysis</li>
+            <li>Hiring and termination processes</li>
+            <li>Sales incentive, merit, and bonus programs</li>
+            <li>Background-check and ergonomic-assessment programs</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Industrial Engineering &amp; Process Improvement</h3>
+          <p>Identify bottlenecks, reduce waste, and design more efficient workflows and production systems.</p>
+          <ul>
+            <li>Time and motion studies</li>
+            <li>Capacity and workflow analysis</li>
+            <li>Facility layouts and material flow</li>
+            <li>Production standards and process optimization</li>
+            <li>Six Sigma-based improvement initiatives</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Selected Experience</div>
+        <h2>Experience across payments, business services, financing, manufacturing, and growth companies.</h2>
+        <p>Representative consulting engagements include the following organizations and project types.</p>
+      </div>
+      <div class="exp-grid">
+        <article class="exp-card">
+          <div class="sector">Electronic Payments</div>
+          <h3>PaySys</h3>
+          <p>Strategic business planning, forecast modeling, accounting-process optimization, FP&amp;A development, and leadership of an internal CRM development initiative focused on risk and fraud mitigation.</p>
+        </article>
+        <article class="exp-card">
+          <div class="sector">HR / Payroll Services</div>
+          <h3>Green Leaf Business Solutions</h3>
+          <p>Accounting alignment, rolling 18-month forecasting, annual budgeting, quarterly forecast reviews, cost reduction, and return-on-investment analysis.</p>
+        </article>
+        <article class="exp-card">
+          <div class="sector">Financing &amp; Payments</div>
+          <h3>Khor Capital</h3>
+          <p>Payment ecosystem optimization, financial strategy support, operational-efficiency improvements, and solutions aligned with complex payment-network requirements.</p>
+        </article>
+        <article class="exp-card">
+          <div class="sector">Electronic Payments</div>
+          <h3>Direct Payment Services</h3>
+          <p>Led a 3,000-merchant portfolio conversion, implemented residual profitability audits, and developed long-term financial forecasting and variance analysis.</p>
+        </article>
+        <article class="exp-card">
+          <div class="sector">Startup / Consumer Product</div>
+          <h3>Simply With You</h3>
+          <p>Three-year strategic planning, investor-oriented financial modeling, pricing and price-elasticity analysis, and evaluation of debt, equity, and loan financing alternatives.</p>
+        </article>
+        <article class="exp-card">
+          <div class="sector">Manufacturing</div>
+          <h3>Colbrit CNC Manufacturing</h3>
+          <p>Workflow and production analysis, Six Sigma waste reduction, facility-layout improvement, material-flow optimization, time-and-motion studies, and capacity analysis.</p>
+        </article>
+      </div>
+
+      <div class="client-ticker-wrap" aria-label="Selected clients and projects">
+        <div class="client-ticker-label">Selected Clients &amp; Projects</div>
+        <div class="client-ticker">
+          <div class="client-ticker-track">
+            <div class="client-logo"><img src="client-paysys.jpg" alt="PaySys"></div>
+            <div class="client-logo"><img src="client-greenleaf.webp" alt="Green Leaf Business Solutions"></div>
+            <div class="client-logo"><img src="client-khor.png" alt="Khor Capital"></div>
+            <div class="client-logo"><img src="client-direct-payment-services.png" alt="Direct Payment Services"></div>
+            <div class="client-logo"><img src="client-simply-with-you.png" alt="Simply With You"></div>
+            <div class="client-logo"><img src="client-colbrit.png" alt="Colbrit CNC Manufacturing"></div>
+            <div class="client-logo" aria-hidden="true"><img src="client-paysys.jpg" alt=""></div>
+            <div class="client-logo" aria-hidden="true"><img src="client-greenleaf.webp" alt=""></div>
+            <div class="client-logo" aria-hidden="true"><img src="client-khor.png" alt=""></div>
+            <div class="client-logo" aria-hidden="true"><img src="client-direct-payment-services.png" alt=""></div>
+            <div class="client-logo" aria-hidden="true"><img src="client-simply-with-you.png" alt=""></div>
+            <div class="client-logo" aria-hidden="true"><img src="client-colbrit.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about-grid">
+      <div class="quote">“Practical consulting should improve how a business makes decisions, uses resources, develops people, and gets work done.”</div>
+      <div class="about-copy">
+        <div class="eyebrow">About Jadafer</div>
+        <h2>Hands-on support for companies building their next stage of growth.</h2>
+        <p>Jadafer Inc. works with startups and small-to-mid-sized businesses to create and administer scalable finance, human resources, and industrial engineering functions.</p>
+        <p>Our approach connects strategy to execution—combining financial discipline, operational analysis, people practices, and process improvement to help organizations make better decisions and operate more effectively.</p>
+        <div class="pill-row">
+          <span class="pill">Strategic Planning</span>
+          <span class="pill">Financial Modeling</span>
+          <span class="pill">FP&amp;A</span>
+          <span class="pill">Human Resources</span>
+          <span class="pill">Six Sigma</span>
+          <span class="pill">Process Improvement</span>
+        </div>
+      </div>
+
+      <div class="founder-grid">
+        <div class="founder-photo">
+          <img src="javier-fernandez-founder.png" alt="Javier D. Fernandez, Founder of Jadafer Inc.">
+        </div>
+        <div class="founder-copy">
+          <div class="eyebrow">Founder</div>
+          <h3>Javier D. Fernandez</h3>
+          <p class="founder-title">Founder, Jadafer Inc.</p>
+          <p>Javier brings hands-on consulting experience across finance and FP&amp;A, strategic planning, human resources, industrial engineering, and process improvement. His work has supported startups and small-to-mid-sized businesses across electronic payments, business services, financing, manufacturing, and growth-stage environments.</p>
+          <p>His consulting approach combines financial discipline with operational execution—helping organizations strengthen forecasting and reporting, improve workflows, develop scalable business functions, and turn strategic priorities into practical results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <div class="eyebrow" style="color:#8ed3f4">Start a Conversation</div>
+        <h2>Ready to improve business performance?</h2>
+        <p>Tell us where your business needs greater clarity, stronger processes, or additional operating support.</p>
+        <a class="btn btn-outline" style="background:white;margin-top:10px" href="mailto:JADAFER20@ATT.NET?subject=Jadafer%20Consulting%20Inquiry">Email Jadafer</a>
+      </div>
+      <div class="contact-box">
+        <h3>Jadafer Inc.</h3>
+        <p><strong>Email</strong><br><a href="mailto:JADAFER20@ATT.NET">JADAFER20@ATT.NET</a></p>
+        <p><strong>Phone</strong><br><a href="tel:+18058135135">805-813-5135</a></p>
+        <p><strong>Web</strong><br><a href="https://www.jadafer.com">www.jadafer.com</a></p>
+        <p style="margin-bottom:0;color:#667085">Business Consulting • Southern California</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span>© <span id="year"></span> Jadafer Inc. All rights reserved.</span>
+    <span>Strategy • People • Results</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('navLinks').classList.remove('open');
+}));
+</script>
+</body>
+</html>
