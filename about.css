@@ -1,0 +1,43 @@
+.about-intro{padding:44px 0 38px}
+.about-intro-grid{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:64px;align-items:center}
+.about-copy .eyebrow{margin:0 0 16px}
+.about-copy h1{font-size:clamp(2.5rem,4.6vw,3.8rem);line-height:1.08;letter-spacing:-.04em;margin:0 0 22px}
+.about-copy p:not(.eyebrow){color:#39444d;line-height:1.65;margin:0 0 16px;max-width:650px}
+.about-copy .about-lead{font-size:1.08rem}
+.about-copy .home-text-link{display:inline-block;margin-top:4px}
+.about-founder{margin:0}
+.about-founder img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;border:1px solid var(--line)}
+.about-founder figcaption{padding-top:14px}
+.about-founder strong{display:block;font:400 1.3rem Georgia}
+.about-founder span{display:block;color:var(--muted);font-size:.88rem;margin:3px 0 8px}
+.about-founder .home-text-link span{display:inline;color:inherit}
+.about-method{background:#e8eef3;border-block:1px solid var(--line);padding:32px 0 36px}
+.about-method h2,.about-expertise h2{font-size:1.85rem;line-height:1.2;letter-spacing:-.02em;margin:0 0 24px}
+.about-pillar-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.about-pillar{border-top:2px solid var(--red);padding-top:16px}
+.about-pillar h3{font-size:1.35rem;line-height:1.3;margin:0 0 10px}
+.about-pillar p{font-size:.96rem;color:#39444d;line-height:1.65;margin:0}
+.about-expertise{padding:28px 0;border-bottom:1px solid var(--line)}
+.about-expertise-grid{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+.about-expertise h2{margin:0;font-size:1.65rem}
+.about-expertise ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 22px;list-style:none;margin:0;padding:0;color:#39444d;font-size:.94rem}
+.about-expertise li{border-left:2px solid var(--line);padding-left:10px}
+@media(max-width:850px){
+ .about-intro-grid{grid-template-columns:minmax(0,1fr) 230px;gap:28px}
+ .about-pillar-grid{gap:22px}
+ .about-expertise-grid{grid-template-columns:1fr;gap:18px}
+ .about-expertise ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:580px){
+ .about-intro{padding:28px 0}
+ .about-intro-grid{grid-template-columns:1fr;gap:28px}
+ .about-copy h1{font-size:2.55rem;margin-bottom:18px}
+ .about-copy .about-lead{font-size:1rem}
+ .about-founder{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;align-items:center}
+ .about-founder figcaption{padding:0}
+ .about-founder strong{font-size:1.2rem;line-height:1.3}
+ .about-method{padding:28px 0}
+ .about-pillar-grid{grid-template-columns:1fr;gap:24px}
+ .about-pillar h3{font-size:1.25rem}
+ .about-method h2{font-size:1.65rem}
+}
